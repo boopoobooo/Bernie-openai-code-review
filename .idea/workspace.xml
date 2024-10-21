@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="fix: main-maven-jar.yml">
-      <change afterPath="$PROJECT_DIR$/openai-code-review-test/src/test/java/Singleton.java" afterDir="false" />
+    <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/test/java/cn/junbao/middleware/sdk/test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/test/java/cn/junbao/middleware/sdk/test/ApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,11 +36,30 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "D:/Code/Bernie/xfg-openai-code-review",
-    "onboarding.tips.debug.path": "D:/Code/Bernie/bernie-openai-code-review/openai-code-review-test/src/main/java/cn/junbao/Main.java"
+    "last_opened_file_path": "D:/Code/interact-api-relocation",
+    "onboarding.tips.debug.path": "D:/Code/Bernie/bernie-openai-code-review/openai-code-review-test/src/main/java/cn/junbao/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.60229886"
   }
 }]]></component>
   <component name="RunManager">
+    <configuration name="ApiTest.http_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="openai-code-review-sdk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.junbao.middleware.sdk.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.junbao.middleware.sdk.test" />
+      <option name="MAIN_CLASS_NAME" value="cn.junbao.middleware.sdk.test.ApiTest" />
+      <option name="METHOD_NAME" value="http_test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="bernie-openai-code-review" />
       <method v="2">
@@ -53,6 +73,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ApiTest.http_test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -84,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1729480693281</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix: .pom">
+      <created>1729481639438</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729481639438</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -102,6 +134,7 @@
     <MESSAGE value="feat: init project" />
     <MESSAGE value="feat: update MANIFEST.MF" />
     <MESSAGE value="fix: main-maven-jar.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: main-maven-jar.yml" />
+    <MESSAGE value="fix: .pom" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: .pom" />
   </component>
 </project>

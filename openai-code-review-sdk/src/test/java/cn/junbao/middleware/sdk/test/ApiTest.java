@@ -9,20 +9,16 @@ import org.junit.Test;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.net.*;
 import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
-import java.util.Map;
 
 @Slf4j
 public class ApiTest {
 
     @Test
     public void test(){
-        String apiKey = "978f055fb6094e16863a5904be5eadcf.q1EoS2jIGub1L86A";
-        String token = BearerTokenUtils.getToken(apiKey);
+        String apiKeySecret = "978f055fb6094e16863a5904be5eadcf.q1EoS2jIGub1L86A";
+        String token = BearerTokenUtils.getToken(apiKeySecret);
         System.out.println(token);
     }
 
@@ -42,16 +38,6 @@ public class ApiTest {
         connection.setDoOutput(true);
 
         String code = "1+1";
-
-        /*HashMap<String, String> map = new HashMap<>();
-        map.put("model","glm-4-plus");
-        map.put("stream","true");
-
-        Map<String ,String > messageMap = new HashMap<>();
-        messageMap.put("role","user");
-        messageMap.put("content","你是一个高级编程架构师，精通各类场景方案、架构设计和编程语言请，请您根据git diff记录，对代码做出评审。代码为: "+code);
-        map.put("message", JSON.toJSONString(messageMap));
-*/
 
         String jsonInpuString = "{"
                 + "\"model\":\"glm-4-plus\","
