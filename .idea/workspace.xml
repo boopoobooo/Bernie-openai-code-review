@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/test/java/cn/junbao/middleware/sdk/test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/test/java/cn/junbao/middleware/sdk/test/ApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1729481639438</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix: test">
+      <created>1729489085983</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729489085983</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +142,7 @@
     <MESSAGE value="feat: update MANIFEST.MF" />
     <MESSAGE value="fix: main-maven-jar.yml" />
     <MESSAGE value="fix: .pom" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: .pom" />
+    <MESSAGE value="fix: test" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: test" />
   </component>
 </project>
