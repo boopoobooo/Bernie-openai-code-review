@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai-code-review-test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-test/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,13 +36,20 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "D:/Code/interact-api-relocation",
+    "last_opened_file_path": "D:/Code/Bernie/bernie-openai-code-review",
     "onboarding.tips.debug.path": "D:/Code/Bernie/bernie-openai-code-review/openai-code-review-test/src/main/java/cn/junbao/Main.java",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.60229886"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\Bernie\bernie-openai-code-review" />
+      <recent name="D:\Code\Bernie\bernie-openai-code-review\openai-code-review-test" />
+      <recent name="D:\Code\Bernie\bernie-openai-code-review\openai-code-review-sdk" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="ApiTest.http_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="openai-code-review-sdk" />
@@ -123,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1729489085983</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix: test">
+      <created>1729489669734</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1729489669734</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
