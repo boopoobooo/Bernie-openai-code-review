@@ -3,7 +3,6 @@ package cn.junbao.middleware.sdk.test;
 import cn.junbao.middleware.sdk.model.ChatCompletionSyncResponse;
 import cn.junbao.middleware.sdk.types.utils.BearerTokenUtils;
 import com.alibaba.fastjson2.JSON;
-import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 import java.io.BufferedReader;
@@ -12,7 +11,6 @@ import java.io.OutputStream;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
 
-@Slf4j
 public class ApiTest {
 
     @Test
