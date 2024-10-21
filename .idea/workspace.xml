@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="fix: main-maven-jar.yml">
       <change afterPath="$PROJECT_DIR$/openai-code-review-test/src/test/java/Singleton.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1729480425095</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix: main-maven-jar.yml">
+      <created>1729480693281</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729480693281</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -95,6 +101,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: init project" />
     <MESSAGE value="feat: update MANIFEST.MF" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update MANIFEST.MF" />
+    <MESSAGE value="fix: main-maven-jar.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: main-maven-jar.yml" />
   </component>
 </project>
