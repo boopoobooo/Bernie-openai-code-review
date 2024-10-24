@@ -109,7 +109,7 @@ public class OpenAiCodeReview {
         String dateFolderName = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
         File dateFolder = new File("repo/" + dateFolderName);
         if (!dateFolder.exists()){
-            dateFolder.mkdir();
+            dateFolder.mkdirs();
         }
 
         String fileName = generateRandomString(12)+".md";
