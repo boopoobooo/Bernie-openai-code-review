@@ -4,22 +4,36 @@ import cn.junbao.middleware.sdk.model.ChatCompletionRequest;
 import cn.junbao.middleware.sdk.model.ChatCompletionSyncResponse;
 import cn.junbao.middleware.sdk.types.utils.BearerTokenUtils;
 import com.alibaba.fastjson2.JSON;
+import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
 
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Random;
 
 public class OpenAiCodeReview {
     public static void main(String[] args) throws Exception {
         System.out.println("测试---openaiCodeReview-sdk");
+        String githubToken = System.getenv("GITHUB_TOKEN");
+        if (null == githubToken){
+            throw new RuntimeException("github Token is null");
+        }
 
+        //获取git分支变更代码
         String diffCode = getGitBranchChangeCode();
 
         //chatGlM 评审代码
         String reviewLog = codeReviewGLM(diffCode.toString());
         System.out.println("评审日志："+reviewLog);
+
+        //编写日志
+        String logUrl = writeLog(githubToken, reviewLog);
+        System.out.println("writeLog：" + logUrl);
 
     }
     public static String getGitBranchChangeCode() throws Exception {
@@ -83,5 +97,41 @@ public class OpenAiCodeReview {
 
         ChatCompletionSyncResponse response = JSON.parseObject(content.toString(), ChatCompletionSyncResponse.class);
         return response.getChoices().get(0).getMessage().getContent();
+    }
+
+    public static String  writeLog(String token , String log) throws  Exception{
+        Git git = Git.cloneRepository()
+                .setURI("https://github.com/boopoobooo/Bernie-openAI-codeReview-log.git")
+                .setDirectory(new File("repo"))
+                .setCredentialsProvider(new UsernamePasswordCredentialsProvider(token, ""))
+                .call();
+
+        String dateFolderName = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+        File dateFolder = new File("repo/" + dateFolderName);
+        if (!dateFolder.exists()){
+            dateFolder.mkdir();
+        }
+
+        String fileName = generateRandomString(12)+".md";
+        File newFile = new File(dateFolder, fileName);
+        try(FileWriter fileWriter = new FileWriter(newFile)){
+            fileWriter.write(log);
+        }
+
+        git.add().addFilepattern(dateFolderName + "/" + fileName).call();
+        git.commit().setMessage("Add new File").call();
+        git.push().setCredentialsProvider(new UsernamePasswordCredentialsProvider(token,""));
+        return "https://github.com/boopoobooo/Bernie-openAI-codeReview-log.git/blob/master/" + dateFolderName + "/" + fileName;
+
+
+    }
+    private static String generateRandomString(int length) {
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        Random random = new Random();
+        StringBuilder sb = new StringBuilder(length);
+        for (int i = 0; i < length; i++) {
+            sb.append(characters.charAt(random.nextInt(characters.length())));
+        }
+        return sb.toString();
     }
 }

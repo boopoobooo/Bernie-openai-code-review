@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main-maven-jar.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main-maven-jar.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/OpenAiCodeReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/OpenAiCodeReview.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/test/java/cn/junbao/middleware/sdk/test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/test/java/cn/junbao/middleware/sdk/test/ApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2nYKPZ8x6Nmm8t0BOeIpH0In4yF" />
@@ -187,7 +192,21 @@
       <option name="project" value="LOCAL" />
       <updated>1729491512091</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat: codeReview-v1">
+      <created>1729757074182</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1729757074182</updated>
+    </task>
+    <task id="LOCAL-00013" summary="test:test codeReview-v1">
+      <created>1729757108423</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1729757108423</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -208,6 +227,8 @@
     <MESSAGE value="fix: .pom" />
     <MESSAGE value="fix: test" />
     <MESSAGE value="fix: test codeReview" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: test codeReview" />
+    <MESSAGE value="feat: codeReview-v1" />
+    <MESSAGE value="test:test codeReview-v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="test:test codeReview-v1" />
   </component>
 </project>
