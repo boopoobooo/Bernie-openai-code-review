@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/main-maven-jar.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main-maven-jar.yml" afterDir="false" />
+    <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="test:test codeReview-v1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/OpenAiCodeReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/OpenAiCodeReview.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +99,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ApiTest.http_test" />
+        <item itemvalue="Application.OpenAiCodeReview" />
         <item itemvalue="JUnit.ApiTest.http_test" />
         <item itemvalue="Application.OpenAiCodeReview" />
       </list>
@@ -206,7 +206,21 @@
       <option name="project" value="LOCAL" />
       <updated>1729757108423</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="test:test codeReview-v1">
+      <created>1729762642974</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1729762642974</updated>
+    </task>
+    <task id="LOCAL-00015" summary="test:write reviewLog">
+      <created>1729764021496</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1729764021496</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +243,7 @@
     <MESSAGE value="fix: test codeReview" />
     <MESSAGE value="feat: codeReview-v1" />
     <MESSAGE value="test:test codeReview-v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="test:test codeReview-v1" />
+    <MESSAGE value="test:write reviewLog" />
+    <option name="LAST_COMMIT_MESSAGE" value="test:write reviewLog" />
   </component>
 </project>
