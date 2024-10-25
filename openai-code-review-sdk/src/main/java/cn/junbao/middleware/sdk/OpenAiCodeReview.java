@@ -102,7 +102,7 @@ public class OpenAiCodeReview {
     public static String  writeLog(String token , String log) throws  Exception{
         Git git = Git.cloneRepository()
                 .setURI("https://github.com/boopoobooo/Bernie-openAI-codeReview-log.git")
-                .setDirectory(new File("path/to/repo"))
+                .setDirectory(new File("repo"))
                 .setCredentialsProvider(new UsernamePasswordCredentialsProvider(token, ""))
                 .call();
 
