@@ -43,10 +43,13 @@ public class OpenAiCodeReview {
     public static void pushWXMessage(String logUrl  ){
         String accessToken = WXAccessTokenUtils.getAccessToken();
         System.out.println("accessToken : "+ accessToken);
+
+        String formatDate = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+
         //微信请求参数信息
         Message message = new Message();
         message.setUrl(logUrl);
-        message.put("auditTime","20241027");
+        message.put("auditTime",formatDate);
         message.put("message","代码评审日志:"+ logUrl);
 
         String url = String.format("https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=%s",accessToken);
