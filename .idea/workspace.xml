@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/OpenAiCodeReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/OpenAiCodeReview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/types/utils/WXAccessTokenUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/test/java/cn/junbao/middleware/sdk/test/WX_Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,26 +38,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Code/Bernie/xfg-openai-code-review&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Code/Bernie/bernie-openai-code-review/openai-code-review-test/src/main/java/cn/junbao/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.60229886&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Notification.DisplayName-DoNotAsk-Lombok plugin": "Lombok integration problem",
+    "Notification.DoNotAsk-Lombok plugin": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "D:/Code/Bernie/xfg-openai-code-review",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "onboarding.tips.debug.path": "D:/Code/Bernie/bernie-openai-code-review/openai-code-review-test/src/main/java/cn/junbao/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.60229886"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Code\Bernie\bernie-openai-code-review" />
       <recent name="D:\Code\Bernie\bernie-openai-code-review\openai-code-review-test" />
       <recent name="D:\Code\Bernie\bernie-openai-code-review\openai-code-review-sdk" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.junbao.middleware.sdk.types.utils" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTest.http_test">
+  <component name="RunManager" selected="JUnit.WX_Test.test_wxMessage">
     <configuration name="OpenAiCodeReview" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.junbao.middleware.sdk.OpenAiCodeReview" />
       <module name="openai-code-review-sdk" />
@@ -84,6 +93,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WX_Test.test_wxMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="openai-code-review-sdk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.junbao.middleware.sdk.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.junbao.middleware.sdk.test" />
+      <option name="MAIN_CLASS_NAME" value="cn.junbao.middleware.sdk.test.WX_Test" />
+      <option name="METHOD_NAME" value="test_wxMessage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="bernie-openai-code-review" />
       <method v="2">
@@ -99,6 +124,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WX_Test.test_wxMessage" />
         <item itemvalue="JUnit.ApiTest.http_test" />
         <item itemvalue="Application.OpenAiCodeReview" />
         <item itemvalue="JUnit.ApiTest.http_test" />
