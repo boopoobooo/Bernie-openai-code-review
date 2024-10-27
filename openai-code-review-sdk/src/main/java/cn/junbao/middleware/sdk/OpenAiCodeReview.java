@@ -2,7 +2,9 @@ package cn.junbao.middleware.sdk;
 
 import cn.junbao.middleware.sdk.model.ChatCompletionRequest;
 import cn.junbao.middleware.sdk.model.ChatCompletionSyncResponse;
+import cn.junbao.middleware.sdk.model.Message;
 import cn.junbao.middleware.sdk.types.utils.BearerTokenUtils;
+import cn.junbao.middleware.sdk.types.utils.WXAccessTokenUtils;
 import com.alibaba.fastjson2.JSON;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
@@ -12,9 +14,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Random;
+import java.util.*;
 
 public class OpenAiCodeReview {
     public static void main(String[] args) throws Exception {
@@ -35,7 +35,47 @@ public class OpenAiCodeReview {
         String logUrl = writeLog(githubToken, reviewLog);
         System.out.println("writeLog：" + logUrl);
 
+        // 微信公众号消息通知
+        pushWXMessage(logUrl);
+
     }
+
+    public static void pushWXMessage(String logUrl  ){
+        String accessToken = WXAccessTokenUtils.getAccessToken();
+        System.out.println("accessToken : "+ accessToken);
+        //微信请求参数信息
+        Message message = new Message();
+        message.setUrl(logUrl);
+        message.put("auditTime","20241027");
+        message.put("message","代码评审日志:"+ logUrl);
+
+        String url = String.format("https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=%s",accessToken);
+        sendPostRequest(url, JSON.toJSONString(message));
+    }
+
+    private static void sendPostRequest(String urlString, String jsonBody) {
+        try {
+            URL url = new URL(urlString);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("POST");
+            conn.setRequestProperty("Content-Type", "application/json; utf-8");
+            conn.setRequestProperty("Accept", "application/json");
+            conn.setDoOutput(true);
+
+            try (OutputStream os = conn.getOutputStream()) {
+                byte[] input = jsonBody.getBytes(StandardCharsets.UTF_8);
+                os.write(input, 0, input.length);
+            }
+
+            try (Scanner scanner = new Scanner(conn.getInputStream(), StandardCharsets.UTF_8.name())) {
+                String response = scanner.useDelimiter("\\A").next();
+                System.out.println(response);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static String getGitBranchChangeCode() throws Exception {
         //1. 代码检出
         ProcessBuilder processBuilder = new ProcessBuilder("git", "diff", "HEAD~1", "HEAD");

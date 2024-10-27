@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/types/utils/WXAccessTokenUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/test/java/cn/junbao/middleware/sdk/test/WX_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -253,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729764630921</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="feat: 微信公众号消息模板--测试">
+      <option name="closed" value="true" />
+      <created>1730009051597</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1730009051597</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -277,6 +280,7 @@
     <MESSAGE value="feat: codeReview-v1" />
     <MESSAGE value="test:write reviewLog" />
     <MESSAGE value="test:test codeReview-v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="test:test codeReview-v1" />
+    <MESSAGE value="feat: 微信公众号消息模板--测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 微信公众号消息模板--测试" />
   </component>
 </project>
