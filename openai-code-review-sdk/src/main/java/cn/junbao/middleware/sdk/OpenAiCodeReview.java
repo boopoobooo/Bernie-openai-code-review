@@ -1,8 +1,8 @@
 package cn.junbao.middleware.sdk;
 
-import cn.junbao.middleware.sdk.model.ChatCompletionRequest;
-import cn.junbao.middleware.sdk.model.ChatCompletionSyncResponse;
-import cn.junbao.middleware.sdk.model.Message;
+import cn.junbao.middleware.sdk.domain.model.ChatCompletionRequest;
+import cn.junbao.middleware.sdk.domain.model.ChatCompletionSyncResponse;
+import cn.junbao.middleware.sdk.domain.model.Message;
 import cn.junbao.middleware.sdk.types.utils.BearerTokenUtils;
 import cn.junbao.middleware.sdk.types.utils.WXAccessTokenUtils;
 import com.alibaba.fastjson2.JSON;

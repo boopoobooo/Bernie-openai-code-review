@@ -1,4 +1,4 @@
-package cn.junbao.middleware.sdk.model;
+package cn.junbao.middleware.sdk.domain.model;
 
 import java.util.HashMap;
 import java.util.Map;

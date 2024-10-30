@@ -1,7 +1,7 @@
 package cn.junbao.middleware.sdk.test;
 
-import cn.junbao.middleware.sdk.model.ChatCompletionRequest;
-import cn.junbao.middleware.sdk.model.ChatCompletionSyncResponse;
+import cn.junbao.middleware.sdk.domain.model.ChatCompletionRequest;
+import cn.junbao.middleware.sdk.domain.model.ChatCompletionSyncResponse;
 import cn.junbao.middleware.sdk.types.utils.BearerTokenUtils;
 import com.alibaba.fastjson2.JSON;
 import org.junit.Test;
