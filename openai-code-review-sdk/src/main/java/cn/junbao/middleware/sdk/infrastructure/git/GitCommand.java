@@ -1,12 +1,15 @@
 package cn.junbao.middleware.sdk.infrastructure.git;
 
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+import cn.junbao.middleware.sdk.types.utils.RandomStringUtils;
+import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.api.errors.GitAPIException;
+import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 public class GitCommand {
@@ -28,6 +31,7 @@ public class GitCommand {
     }
 
     public String diff() throws IOException, InterruptedException {
+        // 获取到 git 提交记录中 最近一条提交的 哈希值
         ProcessBuilder logProcessBuilder = new ProcessBuilder("git", "log", "-1", "--pretty=format:%H");
         logProcessBuilder.directory(new File("."));
         Process logProcess = logProcessBuilder.start();
@@ -37,6 +41,7 @@ public class GitCommand {
         logReader.close();
         logProcess.waitFor();
 
+        //比较 当前提交 和 上一次提交的 差异
         ProcessBuilder diffProcessBuilder = new ProcessBuilder("git", "diff", latestCommitHash + "^" + latestCommitHash);
         diffProcessBuilder.directory(new File("."));
         Process diffProcess = diffProcessBuilder.start();
@@ -55,7 +60,30 @@ public class GitCommand {
         return diffCode.toString();
     }
 
-    public void commitAndPush(){
-        //todo
+    public String  commitAndPush(String recommend) throws GitAPIException, IOException {
+        Git git = Git.cloneRepository()
+                .setURI(githubReviewLogUrl + ".git")
+                .setDirectory(new File("repo"))
+                .setCredentialsProvider(new UsernamePasswordCredentialsProvider(githubToken, ""))
+                .call();
+
+        String fileFolderName = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+        File newFile = new File(fileFolderName);
+        if (!newFile.exists()){
+            newFile.mkdirs();
+        }
+
+        String fileName = projectName + "-" + branch + "-" + author + System.currentTimeMillis() + "-" + RandomStringUtils.randomNumeric(4) + ".md";
+        File file = new File(fileFolderName, fileName);
+        try (FileWriter fileWriter = new FileWriter(file)){
+            fileWriter.write(recommend);
+        }
+
+        git.add().addFilepattern(fileFolderName + fileName).call();
+        git.commit().setMessage("git add codeReview log , fileName = "+ fileName).call();
+        git.push().setCredentialsProvider(new UsernamePasswordCredentialsProvider(githubToken,"")).call();
+        logger.info("git #commitAndPush done , fileName = "+ fileFolderName + "-" + fileName);
+        return githubReviewLogUrl + "/blob/main/" + fileFolderName +"/"+ fileName;
+
     }
 }

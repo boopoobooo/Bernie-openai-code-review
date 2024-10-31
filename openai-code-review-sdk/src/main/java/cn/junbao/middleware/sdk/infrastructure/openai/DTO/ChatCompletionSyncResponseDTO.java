@@ -1,8 +1,8 @@
-package cn.junbao.middleware.sdk.domain.model;
+package cn.junbao.middleware.sdk.infrastructure.openai.DTO;
 
 import java.util.List;
 
-public class ChatCompletionSyncResponse {
+public class ChatCompletionSyncResponseDTO {
 
     private List<Choice> choices;
 

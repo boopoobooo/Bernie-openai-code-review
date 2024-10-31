@@ -1,8 +1,10 @@
-package cn.junbao.middleware.sdk.domain.model;
+package cn.junbao.middleware.sdk.infrastructure.openai.DTO;
+
+import cn.junbao.middleware.sdk.domain.model.Model;
 
 import java.util.List;
 
-public class ChatCompletionRequest {
+public class ChatCompletionRequestDTO {
 
     private String model = Model.GLM_4_FLASH.getCode();
     private List<Prompt> messages;

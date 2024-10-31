@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/infrastructure/git/GitCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/domain/service/AbstractOpenAICodeReviewService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/domain/service/IOpenAICodeReviewService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/domain/service/impl/OpenAiCodeReviewService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/infrastructure/openai/IAICodeRevice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/infrastructure/openai/impl/ChatGLM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/infrastructure/weixin/DTO/TempleteMessageDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/infrastructure/weixin/WeiXinMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/types/utils/RandomStringUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/OpenAiCodeReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/OpenAiCodeReview.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/model/ChatCompletionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/domain/model/ChatCompletionRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/model/ChatCompletionSyncResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/domain/model/ChatCompletionSyncResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/domain/model/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/domain/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/domain/model/ChatCompletionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/infrastructure/openai/DTO/ChatCompletionRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/domain/model/ChatCompletionSyncResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/infrastructure/openai/DTO/ChatCompletionSyncResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/infrastructure/git/GitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/infrastructure/git/GitCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/test/java/cn/junbao/middleware/sdk/test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/test/java/cn/junbao/middleware/sdk/test/ApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +28,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -30,7 +36,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="20241027-bernie-weixin-message" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,6 +79,7 @@
       <recent name="D:\Code\Bernie\bernie-openai-code-review\openai-code-review-sdk" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.junbao.middleware.sdk.infrastructure.weixin.DTO" />
       <recent name="cn.junbao.middleware.sdk.types.utils" />
     </key>
   </component>
@@ -153,7 +160,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729144547110</updated>
-      <workItem from="1730301623435" duration="1870000" />
+      <workItem from="1730301623435" duration="6391000" />
     </task>
     <task id="LOCAL-00001" summary="feat: init project">
       <created>1729144790507</created>
@@ -307,7 +314,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730018619396</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="feat: 项目代码重构">
+      <option name="closed" value="true" />
+      <created>1730303599369</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1730303599369</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feat: 项目代码重构">
+      <option name="closed" value="true" />
+      <created>1730303645804</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1730303645804</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,6 +361,7 @@
     <MESSAGE value="feat: 微信公众号消息模板--整合" />
     <MESSAGE value="fix: wx_message touserid" />
     <MESSAGE value="fix: codeReview-log url" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: codeReview-log url" />
+    <MESSAGE value="feat: 项目代码重构" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 项目代码重构" />
   </component>
 </project>

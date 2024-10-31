@@ -1,7 +1,7 @@
 package cn.junbao.middleware.sdk;
 
-import cn.junbao.middleware.sdk.domain.model.ChatCompletionRequest;
-import cn.junbao.middleware.sdk.domain.model.ChatCompletionSyncResponse;
+import cn.junbao.middleware.sdk.infrastructure.openai.DTO.ChatCompletionRequestDTO;
+import cn.junbao.middleware.sdk.infrastructure.openai.DTO.ChatCompletionSyncResponseDTO;
 import cn.junbao.middleware.sdk.domain.model.Message;
 import cn.junbao.middleware.sdk.types.utils.BearerTokenUtils;
 import cn.junbao.middleware.sdk.types.utils.WXAccessTokenUtils;
@@ -113,16 +113,16 @@ public class OpenAiCodeReview {
         connection.setRequestProperty("User-Agent","Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)");
         connection.setDoOutput(true);
 
-        ChatCompletionRequest chatCompletionRequest = new ChatCompletionRequest();
-        chatCompletionRequest.setModel("glm-4-plus");
-        chatCompletionRequest.setMessages(new ArrayList<ChatCompletionRequest.Prompt>(){
+        ChatCompletionRequestDTO chatCompletionRequestDTO = new ChatCompletionRequestDTO();
+        chatCompletionRequestDTO.setModel("glm-4-plus");
+        chatCompletionRequestDTO.setMessages(new ArrayList<ChatCompletionRequestDTO.Prompt>(){
             private static final long serialVersionUID = -7988151926241837899L;
-            {add((new ChatCompletionRequest.Prompt("user","你是一个高级编程架构师，精通各类场景方案、架构设计和编程语言请，请您根据git diff记录，对代码做出评审。代码为:")));
-            add(new ChatCompletionRequest.Prompt("user",diffCode));
+            {add((new ChatCompletionRequestDTO.Prompt("user","你是一个高级编程架构师，精通各类场景方案、架构设计和编程语言请，请您根据git diff记录，对代码做出评审。代码为:")));
+            add(new ChatCompletionRequestDTO.Prompt("user",diffCode));
             }});
 
         try(OutputStream os = connection.getOutputStream()) {
-            byte[] input = JSON.toJSONString(chatCompletionRequest).getBytes(StandardCharsets.UTF_8);
+            byte[] input = JSON.toJSONString(chatCompletionRequestDTO).getBytes(StandardCharsets.UTF_8);
             os.write(input);
         }
         int responseCode = connection.getResponseCode();
@@ -138,7 +138,7 @@ public class OpenAiCodeReview {
         reader.close();
         connection.disconnect();
 
-        ChatCompletionSyncResponse response = JSON.parseObject(content.toString(), ChatCompletionSyncResponse.class);
+        ChatCompletionSyncResponseDTO response = JSON.parseObject(content.toString(), ChatCompletionSyncResponseDTO.class);
         return response.getChoices().get(0).getMessage().getContent();
     }
 
