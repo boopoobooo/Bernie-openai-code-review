@@ -56,6 +56,7 @@ public class ChatGLM implements IAICodeRevice {
         reader.close();
         connection.disconnect();
 
+        logger.info("[completions] code review content: " + content);
         return JSON.parseObject(content.toString(),ChatCompletionSyncResponseDTO.class);
     }
 }

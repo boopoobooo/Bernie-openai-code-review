@@ -31,6 +31,7 @@ public class GitCommand {
     }
 
     public String diff() throws IOException, InterruptedException {
+        logger.info("[START] diff() get diffCode start:");
         // 获取到 git 提交记录中 最近一条提交的 哈希值
         ProcessBuilder logProcessBuilder = new ProcessBuilder("git", "log", "-1", "--pretty=format:%H");
         logProcessBuilder.directory(new File("."));
@@ -48,7 +49,7 @@ public class GitCommand {
 
         StringBuilder diffCode = new StringBuilder();
         BufferedReader diffReader = new BufferedReader(new InputStreamReader(diffProcess.getInputStream()));
-        String line = "";
+        String line ;
         while ((line = diffReader.readLine())!= null){
             diffCode.append(line).append("\n");
         }
@@ -57,10 +58,12 @@ public class GitCommand {
         if (exitCode != 0){
             throw new RuntimeException("git diff exit with Error , exitCode = " + exitCode);
         }
+        logger.info("[diff][END] git getDiffCode :" + diffCode.toString());
         return diffCode.toString();
     }
 
     public String  commitAndPush(String recommend) throws GitAPIException, IOException {
+        logger.info("[START] commitAndPush start !");
         Git git = Git.cloneRepository()
                 .setURI(githubReviewLogUrl + ".git")
                 .setDirectory(new File("repo"))
@@ -83,6 +86,7 @@ public class GitCommand {
         git.commit().setMessage("git add codeReview log , fileName = "+ fileName).call();
         git.push().setCredentialsProvider(new UsernamePasswordCredentialsProvider(githubToken,"")).call();
         logger.info("git #commitAndPush done , fileName = "+ fileFolderName + "-" + fileName);
+        logger.info("[END] commitAndPush END !");
         return githubReviewLogUrl + "/blob/main/" + fileFolderName +"/"+ fileName;
 
     }

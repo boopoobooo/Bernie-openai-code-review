@@ -15,7 +15,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class WeiXinMessage {
-    private final Logger logger = LoggerFactory.getLogger(WeiXinMessage.class);
+    private static final Logger logger = LoggerFactory.getLogger(WeiXinMessage.class);
 
     private final String appId;
     private final String secret;
@@ -58,6 +58,7 @@ public class WeiXinMessage {
                 System.out.println(response);
             }
         } catch (Exception e) {
+            logger.info("[ERROR] sendPostRequest  e : "+e);
             e.printStackTrace();
         }
     }
