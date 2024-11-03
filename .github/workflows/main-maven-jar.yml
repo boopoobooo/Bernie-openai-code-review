@@ -69,6 +69,6 @@ jobs:
           WEIXIN_TOUSER: ${{ secrets.WEIXIN_TOUSER }}
           WEIXIN_TEMPLATE_ID: ${{ secrets.WEIXIN_TEMPLATE_ID }}
           #openai 配置
-          CHATGLM_APIHOST: ${{ secret.CHATGLM_APIHOST }}
-          CHATGLM_APIKEYSECRET: ${{ secret.CHATGLM_APIKEYSECRET }}
+          CHATGLM_APIHOST: ${{ secrets.CHATGLM_APIHOST }}
+          CHATGLM_APIKEYSECRET: ${{ secrets.CHATGLM_APIKEYSECRET }}
 
