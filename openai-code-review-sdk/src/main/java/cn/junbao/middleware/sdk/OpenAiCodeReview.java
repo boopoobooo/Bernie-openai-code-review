@@ -65,8 +65,8 @@ public class OpenAiCodeReview {
         );
 
         ChatGLM chatGLM = new ChatGLM(
-                getEnv("API_HOST"),
-                getEnv("API_KEY_SECRET")
+                getEnv("CHATGLM_APIHOST"),
+                getEnv("CHATGLM_APIKEYSECRET")
         );
         OpenAiCodeReviewService openAiCodeReviewService = new OpenAiCodeReviewService(gitCommand,chatGLM,weiXinMessage);
         openAiCodeReviewService.exec();
