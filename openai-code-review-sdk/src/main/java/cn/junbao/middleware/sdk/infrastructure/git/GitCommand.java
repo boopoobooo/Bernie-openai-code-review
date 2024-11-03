@@ -68,7 +68,7 @@ public class GitCommand {
                 .call();
 
         String fileFolderName = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-        File newFile = new File(fileFolderName);
+        File newFile = new File("repo/"+fileFolderName);
         if (!newFile.exists()){
             newFile.mkdirs();
         }
@@ -79,7 +79,7 @@ public class GitCommand {
             fileWriter.write(recommend);
         }
 
-        git.add().addFilepattern(fileFolderName + fileName).call();
+        git.add().addFilepattern(fileFolderName +"/"+ fileName).call();
         git.commit().setMessage("git add codeReview log , fileName = "+ fileName).call();
         git.push().setCredentialsProvider(new UsernamePasswordCredentialsProvider(githubToken,"")).call();
         logger.info("git #commitAndPush done , fileName = "+ fileFolderName + "-" + fileName);

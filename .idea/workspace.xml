@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="" />
+    <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/OpenAiCodeReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/OpenAiCodeReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/domain/model/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/infrastructure/git/GitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/infrastructure/git/GitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/types/utils/WXAccessTokenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/cn/junbao/middleware/sdk/types/utils/WXAccessTokenUtils.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -331,7 +337,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730625486167</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="fix: getEnv chatGlm">
+      <option name="closed" value="true" />
+      <created>1730626437455</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1730626437455</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,6 +379,7 @@
     <MESSAGE value="feat: 项目代码重构" />
     <MESSAGE value="feat: 项目代码重构--coding" />
     <MESSAGE value="fix: github action" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: github action" />
+    <MESSAGE value="fix: getEnv chatGlm" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: getEnv chatGlm" />
   </component>
 </project>
