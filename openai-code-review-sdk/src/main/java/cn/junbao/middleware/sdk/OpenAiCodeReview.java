@@ -1,13 +1,19 @@
 package cn.junbao.middleware.sdk;
 
+import cn.junbao.middleware.sdk.domain.service.impl.OpenAiCodeReviewService;
+import cn.junbao.middleware.sdk.infrastructure.git.GitCommand;
 import cn.junbao.middleware.sdk.infrastructure.openai.DTO.ChatCompletionRequestDTO;
 import cn.junbao.middleware.sdk.infrastructure.openai.DTO.ChatCompletionSyncResponseDTO;
 import cn.junbao.middleware.sdk.domain.model.Message;
+import cn.junbao.middleware.sdk.infrastructure.openai.impl.ChatGLM;
+import cn.junbao.middleware.sdk.infrastructure.weixin.WeiXinMessage;
 import cn.junbao.middleware.sdk.types.utils.BearerTokenUtils;
 import cn.junbao.middleware.sdk.types.utils.WXAccessTokenUtils;
 import com.alibaba.fastjson2.JSON;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -17,6 +23,72 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class OpenAiCodeReview {
+
+    private static final Logger logger = LoggerFactory.getLogger(OpenAiCodeReview.class);
+
+    //配置信息
+    //1. 微信配置信息:
+    private static final String WEIXIN_APPID = "wxde4ec457feb6dd87";
+    private static final String WEIXIN_SECRET = "66e694731e30f3020266d9f6159680ce";
+    private static final String WEIXIN_TOUSER = "omDlA6zKW08YwGTp9ZCEBY6t8cOY";
+    private static final String WEIXIN_TEMPLATE_ID = "I0GUueCOsgfCVrCfcKGzG26PxT1QCcLDNVklMVnqkMk";
+
+    //2. chatGLM 配置
+    private String CHATGLM_APIHOST = "https://open.bigmodel.cn/api/paas/v4/chat/completions";
+    private String CHATGLM_APIKEYSECRET = "";
+
+    //3. GitHub配置
+    private String GITHUB_REVIEW_LOG_URI;
+    private String github_token;
+
+    // 工程配置 - github Action自动获取
+    private String github_project;
+    private String github_branch;
+    private String github_author;
+
+    public static void main(String[] args) {
+        logger.info("[START] openAI Code Review start!");
+        GitCommand gitCommand = new GitCommand(
+                getEnv("GITHUB_REVIEW_LOG_URI"),
+                getEnv("GITHUB_TOKEN"),
+                getEnv("COMMIT_PROJECT"),
+                getEnv("COMMIT_BRANCH"),
+                getEnv("COMMIT_AUTHOR"),
+                getEnv("COMMIT_MESSAGE")
+                );
+
+        WeiXinMessage weiXinMessage = new WeiXinMessage(
+                getEnv("WEIXIN_APPID"),
+                getEnv("WEIXIN_SECRET"),
+                getEnv("WEIXIN_TOUSER"),
+                getEnv("WEIXIN_TEMPLATE_ID")
+        );
+
+        ChatGLM chatGLM = new ChatGLM(
+                getEnv("API_HOST"),
+                getEnv("API_KEY_SECRET")
+        );
+        OpenAiCodeReviewService openAiCodeReviewService = new OpenAiCodeReviewService(gitCommand,chatGLM,weiXinMessage);
+        openAiCodeReviewService.exec();
+
+        logger.info("[END] openAI Code Review Done!");
+    }
+
+
+    public static String getEnv(String key){
+        String value= System.getenv(key);
+        if (null == value){
+            throw new RuntimeException("get System env value is null");
+        }
+        return value;
+    }
+
+
+
+
+
+    /// 注释代码： 工程重构，不再使用，仅作为参考
+    /*
     public static void main(String[] args) throws Exception {
         System.out.println("测试---openaiCodeReview-sdk");
         String githubToken = System.getenv("GITHUB_TOKEN");
@@ -176,5 +248,5 @@ public class OpenAiCodeReview {
             sb.append(characters.charAt(random.nextInt(characters.length())));
         }
         return sb.toString();
-    }
+    }*/
 }

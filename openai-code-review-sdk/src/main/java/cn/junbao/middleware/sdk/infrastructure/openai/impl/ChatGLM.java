@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
@@ -19,16 +20,16 @@ public class ChatGLM implements IAICodeRevice {
 
     private final Logger logger = LoggerFactory.getLogger(ChatGLM.class);
 
-    private final String apiKeySecret;
     private final String apiHost;
+    private final String apiKeySecret;
 
-    public ChatGLM(String apiKeySecret, String apiHost) {
-        this.apiKeySecret = apiKeySecret;
+    public ChatGLM( String apiHost , String apiKeySecret) {
         this.apiHost = apiHost;
+        this.apiKeySecret = apiKeySecret;
     }
 
     @Override
-    public ChatCompletionSyncResponseDTO completions(ChatCompletionRequestDTO requestDTO) throws Exception {
+    public ChatCompletionSyncResponseDTO completions(ChatCompletionRequestDTO requestDTO) throws IOException {
         String token = BearerTokenUtils.getToken(apiKeySecret);
         logger.info("[ChatGLM] #completions token = "+token);
         URL url = new URL(apiHost);

@@ -2,14 +2,29 @@ package cn.junbao.middleware.sdk.domain.service;
 
 import cn.junbao.middleware.sdk.infrastructure.git.GitCommand;
 import cn.junbao.middleware.sdk.infrastructure.openai.IAICodeRevice;
+import cn.junbao.middleware.sdk.infrastructure.weixin.WeiXinMessage;
+import org.eclipse.jgit.api.errors.GitAPIException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
 public abstract class AbstractOpenAICodeReviewService implements IOpenAICodeReviewService{
 
+    private final Logger logger = LoggerFactory.getLogger(AbstractOpenAICodeReviewService.class);
+
     protected final GitCommand gitCommand;
 
     protected final IAICodeRevice aiCodeRevice;
+
+    protected final WeiXinMessage weiXinMessage;
+
+    public AbstractOpenAICodeReviewService(GitCommand gitCommand, IAICodeRevice aiCodeRevice, WeiXinMessage weiXinMessage) {
+        this.gitCommand = gitCommand;
+        this.aiCodeRevice = aiCodeRevice;
+        this.weiXinMessage = weiXinMessage;
+    }
+
     @Override
     public void exec() {
         try {
@@ -21,18 +36,16 @@ public abstract class AbstractOpenAICodeReviewService implements IOpenAICodeRevi
             String codeReviewLogUrl = recordCodeReviewLog(recommend);
             //4. 评审结果通知
             pushMessage(codeReviewLogUrl);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+        } catch (Exception e ){
+            logger.error("AI-codeReview ERROR!! ", e );
         }
     }
 
     protected abstract String getGitDiffCode() throws IOException, InterruptedException;
 
-    protected abstract String codeReview(String diffCode) ;
+    protected abstract String codeReview(String diffCode) throws IOException;
 
-    protected abstract String recordCodeReviewLog(String recommend);
+    protected abstract String recordCodeReviewLog(String recommend) throws GitAPIException, IOException;
 
     protected abstract void pushMessage(String codeReviewLogUrl);
 }
