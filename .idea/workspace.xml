@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="" />
+    <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,7 +148,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729144547110</updated>
       <workItem from="1730301623435" duration="13156000" />
-      <workItem from="1730640049524" duration="5641000" />
+      <workItem from="1730640049524" duration="6771000" />
     </task>
     <task id="LOCAL-00001" summary="feat: init project">
       <created>1729144790507</created>
@@ -396,7 +398,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730821227412</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="fix: gitCommand commitAndPush">
+      <option name="closed" value="true" />
+      <created>1730821776649</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1730821776649</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,9 +442,9 @@
     <MESSAGE value="fix: getEnv chatGlm" />
     <MESSAGE value="fix: weixin message &amp; github log" />
     <MESSAGE value="fix: gitCommand diff" />
-    <MESSAGE value="fix: gitCommand commitAndPush" />
     <MESSAGE value="fix: add log" />
     <MESSAGE value="fix: github action" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: github action" />
+    <MESSAGE value="fix: gitCommand commitAndPush" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: gitCommand commitAndPush" />
   </component>
 </project>
