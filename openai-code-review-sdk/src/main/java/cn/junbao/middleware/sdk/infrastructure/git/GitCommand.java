@@ -43,22 +43,23 @@ public class GitCommand {
         logProcess.waitFor();
 
         //比较 当前提交 和 上一次提交的 差异
-        ProcessBuilder diffProcessBuilder = new ProcessBuilder("git", "diff", latestCommitHash + "^" + latestCommitHash);
+        ProcessBuilder diffProcessBuilder = new ProcessBuilder("git", "diff", latestCommitHash + "^", latestCommitHash);
         diffProcessBuilder.directory(new File("."));
         Process diffProcess = diffProcessBuilder.start();
 
         StringBuilder diffCode = new StringBuilder();
         BufferedReader diffReader = new BufferedReader(new InputStreamReader(diffProcess.getInputStream()));
-        String line ;
-        while ((line = diffReader.readLine())!= null){
+        String line;
+        while ((line = diffReader.readLine()) != null) {
             diffCode.append(line).append("\n");
         }
         diffReader.close();
+
         int exitCode = diffProcess.waitFor();
-        if (exitCode != 0){
-            throw new RuntimeException("git diff exit with Error , exitCode = " + exitCode);
+        if (exitCode != 0) {
+            throw new RuntimeException("[diff]Failed to get diff, exit code:" + exitCode);
         }
-        logger.info("[diff][END] git getDiffCode :" + diffCode.toString());
+
         return diffCode.toString();
     }
 
