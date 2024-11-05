@@ -72,14 +72,14 @@ public class GitCommand {
                 .call();
 
         String fileFolderName = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-        File newFile = new File("repo/"+fileFolderName);
-        if (!newFile.exists()){
-            newFile.mkdirs();
+        File dateFolder = new File("repo/"+fileFolderName);
+        if (!dateFolder.exists()){
+            dateFolder.mkdirs();
         }
 
         String fileName = projectName + "-" + branch + "-" + author + System.currentTimeMillis() + "-" + ".md";
         logger.info("[commitAndPush] fileName = "+ fileName);
-        File file = new File(fileFolderName, fileName);
+        File file = new File(dateFolder, fileName);
         try (FileWriter fileWriter = new FileWriter(file)){
             fileWriter.write(recommend);
         }

@@ -146,7 +146,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729144547110</updated>
       <workItem from="1730301623435" duration="13156000" />
-      <workItem from="1730640049524" duration="5075000" />
+      <workItem from="1730640049524" duration="5641000" />
     </task>
     <task id="LOCAL-00001" summary="feat: init project">
       <created>1729144790507</created>
@@ -388,7 +388,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730820754285</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="fix: github action">
+      <option name="closed" value="true" />
+      <created>1730821227411</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1730821227412</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,12 +429,12 @@
     <MESSAGE value="fix: codeReview-log url" />
     <MESSAGE value="feat: 项目代码重构" />
     <MESSAGE value="feat: 项目代码重构--coding" />
-    <MESSAGE value="fix: github action" />
     <MESSAGE value="fix: getEnv chatGlm" />
     <MESSAGE value="fix: weixin message &amp; github log" />
     <MESSAGE value="fix: gitCommand diff" />
     <MESSAGE value="fix: gitCommand commitAndPush" />
     <MESSAGE value="fix: add log" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: add log" />
+    <MESSAGE value="fix: github action" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: github action" />
   </component>
 </project>
