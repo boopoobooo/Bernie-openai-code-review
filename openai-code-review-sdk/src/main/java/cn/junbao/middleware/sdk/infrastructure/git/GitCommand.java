@@ -77,7 +77,8 @@ public class GitCommand {
             newFile.mkdirs();
         }
 
-        String fileName = projectName + "-" + branch + "-" + author + System.currentTimeMillis() + "-" + RandomStringUtils.randomNumeric(4) + ".md";
+        String fileName = projectName + "-" + branch + "-" + author + System.currentTimeMillis() + "-" + ".md";
+        logger.info("[commitAndPush] fileName = "+ fileName);
         File file = new File(fileFolderName, fileName);
         try (FileWriter fileWriter = new FileWriter(file)){
             fileWriter.write(recommend);

@@ -149,7 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729144547110</updated>
       <workItem from="1730301623435" duration="13156000" />
-      <workItem from="1730640049524" duration="3188000" />
+      <workItem from="1730640049524" duration="4113000" />
     </task>
     <task id="LOCAL-00001" summary="feat: init project">
       <created>1729144790507</created>
@@ -367,7 +367,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730818616786</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="fix: gitCommand commitAndPush">
+      <option name="closed" value="true" />
+      <created>1730819489908</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1730819489908</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,6 +413,7 @@
     <MESSAGE value="fix: weixin message &amp; github log" />
     <MESSAGE value="fix: add log" />
     <MESSAGE value="fix: gitCommand diff" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: gitCommand diff" />
+    <MESSAGE value="fix: gitCommand commitAndPush" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: gitCommand commitAndPush" />
   </component>
 </project>
