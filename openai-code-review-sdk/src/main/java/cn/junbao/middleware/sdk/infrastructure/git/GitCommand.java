@@ -14,15 +14,15 @@ import java.util.Date;
 
 public class GitCommand {
     private final Logger logger = LoggerFactory.getLogger(GitCommand.class);
-    private final String githubReviewLogUrl;
+    private final String githubReviewLogUri;
     private final String githubToken;
     private final String projectName;
     private final String branch;
     private final String author;
     private final String message;
 
-    public GitCommand(String githubReviewLogUrl, String githubToken, String projectName, String branch, String author, String message) {
-        this.githubReviewLogUrl = githubReviewLogUrl;
+    public GitCommand(String githubReviewLogUri, String githubToken, String projectName, String branch, String author, String message) {
+        this.githubReviewLogUri = githubReviewLogUri;
         this.githubToken = githubToken;
         this.projectName = projectName;
         this.branch = branch;
@@ -66,7 +66,7 @@ public class GitCommand {
     public String  commitAndPush(String recommend) throws GitAPIException, IOException {
         logger.info("[START] commitAndPush start !");
         Git git = Git.cloneRepository()
-                .setURI(githubReviewLogUrl + ".git")
+                .setURI(githubReviewLogUri + ".git")
                 .setDirectory(new File("repo"))
                 .setCredentialsProvider(new UsernamePasswordCredentialsProvider(githubToken, ""))
                 .call();
@@ -88,7 +88,7 @@ public class GitCommand {
         git.push().setCredentialsProvider(new UsernamePasswordCredentialsProvider(githubToken,"")).call();
         logger.info("git #commitAndPush done , fileName = "+ fileFolderName + "-" + fileName);
         logger.info("[END] commitAndPush END !");
-        return githubReviewLogUrl + "/blob/main/" + fileFolderName +"/"+ fileName;
+        return githubReviewLogUri + "/blob/main/" + fileFolderName +"/"+ fileName;
 
     }
 }
