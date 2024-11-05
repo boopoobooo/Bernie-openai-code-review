@@ -45,6 +45,7 @@ public class OpenAiCodeReview {
         if (null == value){
             throw new RuntimeException("get System env value is null");
         }
+        logger.info("[getEnv]   getEnv--key: "+ key + "  value : "+value);
         return value;
     }
 
