@@ -46,7 +46,7 @@ jobs:
         id: commit-message
         run: echo "COMMIT_MESSAGE=$(git log -1 --pretty=format:'%s')" >> $GITHUB_ENV
 
-      - name: Print EnvName repository, branch name, commit author, and commit message
+      - name: Print repository, branch name, commit author, and commit message
         run: |
           echo "Repository name is ${{ env.REPO_NAME }}"
           echo "Branch name is ${{ env.BRANCH_NAME }}"
@@ -59,7 +59,7 @@ jobs:
           #github 配置
           GITHUB_REVIEW_LOG_URI: ${{ secrets.CODE_REVIEW_LOG_URI }}
           GITHUB_TOKEN: ${{ secrets.CODE_TOKEN }}
-          COMMIT_PROJECT: ${{ env.REPO.NAME }}
+          COMMIT_PROJECT: ${{ env.REPO_NAME }}
           COMMIT_BRANCH: ${{ env.BRANCH_NAME }}
           COMMIT_AUTHOR: ${{ env.COMMIT_AUTHOR }}
           COMMIT_MESSAGE: ${{ env.COMMIT_MESSAGE }}
