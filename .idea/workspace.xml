@@ -148,7 +148,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729144547110</updated>
       <workItem from="1730301623435" duration="13156000" />
-      <workItem from="1730640049524" duration="6771000" />
+      <workItem from="1730640049524" duration="8605000" />
     </task>
     <task id="LOCAL-00001" summary="feat: init project">
       <created>1729144790507</created>
@@ -406,7 +406,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730821776649</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="test: 测试">
+      <option name="closed" value="true" />
+      <created>1730822989533</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1730822989533</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,6 +453,7 @@
     <MESSAGE value="fix: add log" />
     <MESSAGE value="fix: github action" />
     <MESSAGE value="fix: gitCommand commitAndPush" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: gitCommand commitAndPush" />
+    <MESSAGE value="test: 测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: 测试" />
   </component>
 </project>
