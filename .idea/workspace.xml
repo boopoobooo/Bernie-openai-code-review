@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/main-remote-jar.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main-remote-jar.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai-code-review-test/src/test/java/cn/junbao/middleware/sdk/test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-test/src/test/java/cn/junbao/middleware/sdk/test/ApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -455,7 +456,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731046543782</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="fix: github action main-remote-jar.yml">
+      <option name="closed" value="true" />
+      <created>1731046989301</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1731046989301</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
