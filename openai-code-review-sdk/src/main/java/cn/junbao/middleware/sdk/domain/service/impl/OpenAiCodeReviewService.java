@@ -51,10 +51,10 @@ public class OpenAiCodeReviewService extends AbstractOpenAICodeReviewService {
     @Override
     protected void pushMessage(String codeReviewLogUrl) {
         Map<String,Map<String,String >> data = new HashMap<>();
-        TempleteMessageDTO.put(data,TempleteMessageDTO.TemplateKey.REPO_NAME.getCode(), TempleteMessageDTO.TemplateKey.REPO_NAME.getInfo());
-        TempleteMessageDTO.put(data,TempleteMessageDTO.TemplateKey.BRANCH_NAME.getCode(), TempleteMessageDTO.TemplateKey.BRANCH_NAME.getInfo());
-        TempleteMessageDTO.put(data,TempleteMessageDTO.TemplateKey.COMMIT_AUTHOR.getCode(), TempleteMessageDTO.TemplateKey.COMMIT_AUTHOR.getInfo());
-        TempleteMessageDTO.put(data,TempleteMessageDTO.TemplateKey.COMMIT_MESSAGE.getCode(), TempleteMessageDTO.TemplateKey.COMMIT_MESSAGE.getInfo());
+        TempleteMessageDTO.put(data,TempleteMessageDTO.TemplateKey.REPO_NAME.getCode(), gitCommand.getProjectName());
+        TempleteMessageDTO.put(data,TempleteMessageDTO.TemplateKey.BRANCH_NAME.getCode(), gitCommand.getBranch());
+        TempleteMessageDTO.put(data,TempleteMessageDTO.TemplateKey.COMMIT_AUTHOR.getCode(), gitCommand.getAuthor());
+        TempleteMessageDTO.put(data,TempleteMessageDTO.TemplateKey.COMMIT_MESSAGE.getCode(), gitCommand.getMessage());
 
         weiXinMessage.sendTemplateMessage(codeReviewLogUrl,data);
     }

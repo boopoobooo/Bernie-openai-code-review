@@ -92,4 +92,28 @@ public class GitCommand {
         return githubReviewLogUri + "/blob/main/" + fileFolderName +"/"+ fileName;
 
     }
+
+    public String getGithubReviewLogUri() {
+        return githubReviewLogUri;
+    }
+
+    public String getGithubToken() {
+        return githubToken;
+    }
+
+    public String getProjectName() {
+        return projectName;
+    }
+
+    public String getBranch() {
+        return branch;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getMessage() {
+        return message;
+    }
 }
