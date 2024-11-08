@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb50cac5-dc65-4b85-8362-f11724dc5cca" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/main-remote-jar.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main-remote-jar.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -448,7 +447,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731043410167</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="fix: github action main-remote-jar.yml">
+      <option name="closed" value="true" />
+      <created>1731046543782</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1731046543782</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,6 +496,7 @@
     <MESSAGE value="fix: gitCommand commitAndPush" />
     <MESSAGE value="test: 测试" />
     <MESSAGE value="fix: weixin message" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: weixin message" />
+    <MESSAGE value="fix: github action main-remote-jar.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: github action main-remote-jar.yml" />
   </component>
 </project>
